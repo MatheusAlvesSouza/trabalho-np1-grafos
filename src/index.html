@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Grafos !</title>
+    <link rel="stylesheet" href="css/pattern.css">
+  </head>
+  <body>
+
+    <div id="container_geral">
+      <div id="titulo">
+        <h1>Olá, bem vindo ao nosso app!</h1>
+        Nós estamos usando Node.js <script>document.write(process.versions.node)</script>,
+        Chromium <script>document.write(process.versions.chrome)</script>,
+        e Electron <script>document.write(process.versions.electron)</script>.
+      </div>
+      <div id="programa">
+        <h1>Aqui é onde as matrizes serão desenvolvidas.</h1>
+      </div>
+    </div>
+
+    <script>
+      require('./renderer.js')
+    </script>
+  </body>
+</html>

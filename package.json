@@ -1,22 +1,16 @@
 {
-  "name": "electron-quick-start",
+  "name": "conversor-de-matrizes",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "Aplicação que converte matrizes e listas de adjacência",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-packager . ConversorDeMatrizes --ignore=\"\\.git(ignore|modules)\"."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "Matheus A.",
+  "license": "LSCI",
   "devDependencies": {
-    "electron": "^4.0.3"
+    "electron": "4.0.3",
+    "electron-packager": "13.0.1"
   }
 }
