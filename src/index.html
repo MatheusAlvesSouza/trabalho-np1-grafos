@@ -1,26 +1,88 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Grafos !</title>
-    <link rel="stylesheet" href="css/pattern.css">
-  </head>
-  <body>
 
-    <div id="container_geral">
-      <div id="titulo">
-        <h1>Olá, bem vindo ao nosso app!</h1>
-        Nós estamos usando Node.js <script>document.write(process.versions.node)</script>,
-        Chromium <script>document.write(process.versions.chrome)</script>,
-        e Electron <script>document.write(process.versions.electron)</script>.
+<head>
+  <meta charset="UTF-8">
+  <title>Grafos !</title>
+  <link rel="stylesheet" href="css/pattern.css">
+</head>
+
+<body>
+
+  <div id="container_geral">
+    <div id="titulo">
+      <h1>Criador de grafos 1.0!</h1>
+      Nós estamos usando Node.js
+      <script>document.write(process.versions.node)</script>,
+      Chromium
+      <script>document.write(process.versions.chrome)</script>,
+      e Electron
+      <script>document.write(process.versions.electron)</script>.
+    </div>
+    <div id="programa">
+      <!--
+          Area do form para criar a matriz/lista
+        -->
+      <div id="container_form">
+        <h1>Inputs</h1>
+        <hr /> <br />
+
+        <label>Insira os nós do grafo:</label>
+        <input type="text" name="nodes" id="input_nodes" onkeydown="getNodes()"/>
       </div>
-      <div id="programa">
-        <h1>Aqui é onde as matrizes serão desenvolvidas.</h1>
+      <!--
+          Area de printar o resultado
+        -->
+      <div id="container_result">
+        <h1>Resultado</h1>
+        <hr />  <br />
       </div>
     </div>
+  </div>
 
-    <script>
-      require('./renderer.js')
-    </script>
-  </body>
+  <script>
+
+    /**
+     * TODO Criar prototype para Nós (node) e prototype para links
+     **/
+    // Pega todos nós no input_nodes
+    const getNodes = () => {
+      const input = document.getElementById("input_nodes").value; // Pega o input
+      const nodes = input.split(' '); // Quebra por espaço
+
+      for (let i = 0; i < nodes.length; i++) {
+        nodes[i] = {
+          'id': i,
+          'node': nodes[i],
+          'links': []
+        };
+      }
+
+      console.log(nodes);
+      createInputLinks(nodes);
+    }
+
+    // Cria todos os inputs com os links a serem inputados
+    const createInputLinks = (nodes) => {
+
+      console.log("createInputLinks");
+
+      createList(nodes);
+      createMatriz(nodes);
+    }
+
+    // Cria a lista
+    const createList = (nodes) => { }
+
+    // Cria a matriz
+    const createMatriz = (nodes) => {
+
+      const container_result = document.getElementById('container_result');
+      const table = document.createElement('table');
+
+    }
+
+  </script>
+</body>
+
 </html>
