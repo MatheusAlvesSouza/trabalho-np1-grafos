@@ -29,6 +29,9 @@
 
         <label>Insira os nós do grafo:</label>
         <input type="text" name="nodes" id="input_nodes" onkeydown="getNodes()"/>
+        <div id="container_adjacencias">
+
+        </div>
       </div>
       <!--
           Area de printar o resultado
@@ -39,50 +42,7 @@
       </div>
     </div>
   </div>
-
-  <script>
-
-    /**
-     * TODO Criar prototype para Nós (node) e prototype para links
-     **/
-    // Pega todos nós no input_nodes
-    const getNodes = () => {
-      const input = document.getElementById("input_nodes").value; // Pega o input
-      const nodes = input.split(' '); // Quebra por espaço
-
-      for (let i = 0; i < nodes.length; i++) {
-        nodes[i] = {
-          'id': i,
-          'node': nodes[i],
-          'links': []
-        };
-      }
-
-      console.log(nodes);
-      createInputLinks(nodes);
-    }
-
-    // Cria todos os inputs com os links a serem inputados
-    const createInputLinks = (nodes) => {
-
-      console.log("createInputLinks");
-
-      createList(nodes);
-      createMatriz(nodes);
-    }
-
-    // Cria a lista
-    const createList = (nodes) => { }
-
-    // Cria a matriz
-    const createMatriz = (nodes) => {
-
-      const container_result = document.getElementById('container_result');
-      const table = document.createElement('table');
-
-    }
-
-  </script>
+  <script type="text/javascript" src="js/index/inputs.js"></script>
 </body>
 
 </html>
