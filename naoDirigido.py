@@ -126,5 +126,5 @@ def printarOpcoes(peso):
 
         return
     else:
-        print("Opção indisponivel")
+        print("Opção indisponivel - Não é possivel converter uma matriz com peso para uma lista")
     return
